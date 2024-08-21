@@ -1,5 +1,5 @@
 wflow_id,.estimator,n,std_err,.config,penalty,mixture,mn_log_loss,pr_auc,roc_auc
-baseline_glm,binary,1,NA,Preprocessor1_Model1,NA,NA,0.431,0.198,0.581
+baseline_glm,binary,1,NA,Preprocessor1_Model1,NA,NA,0.274,0.698,0.886
 glmnet_flights,binary,1,NA,Preprocessor1_Model01,0.001,0,0.382,0.388,0.742
 glmnet_flights,binary,1,NA,Preprocessor1_Model02,0.002,0,0.382,0.388,0.742
 glmnet_flights,binary,1,NA,Preprocessor1_Model03,0.003,0,0.382,0.388,0.742

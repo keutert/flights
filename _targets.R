@@ -114,22 +114,40 @@ list(
     )
   ),
   # add simple model as a baseline
+  # tar_target(
+  #   baseline_wflow,
+  #   workflow() |>
+  #   add_model(
+  #     logistic_reg()
+  #   ) |>
+  #   add_recipe(
+  #     recipe(
+  #       arr_delay ~ air_time + distance,
+  #       data = train_data
+  #     ) |>
+  #     step_impute_median(
+  #       all_numeric_predictors()
+  #     )
+  #   )
+  # ),
+  # create competing model
   tar_target(
     baseline_wflow,
     workflow() |>
-    add_model(
-      logistic_reg()
-    ) |>
-    add_recipe(
-      recipe(
-        arr_delay ~ air_time + distance,
-        data = train_data
+      add_model(
+        rand_forest(mode = 'classification')
       ) |>
-      step_impute_median(
-        all_numeric_predictors()
+      add_recipe(
+        recipe(
+          arr_delay ~ air_time + distance + dep_time + carrier + origin,
+          data = train_data
+        ) |>
+          step_impute_median(
+            all_numeric_predictors()
+          )
       )
-    )
   ),
+
   # evaluate model on validation set
   tar_target(
     baseline_tuned,
