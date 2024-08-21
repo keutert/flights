@@ -72,7 +72,7 @@ list(
   # create recipe
   tar_target(
     name = recipe,
-    recipe %>%
+    train_data %>%
       step_impute_linear(all_numeric_predictors()) %>%
       step_normalize(all_numeric_predictors())
   )
