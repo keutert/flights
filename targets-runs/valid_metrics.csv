@@ -1,2 +1,2 @@
 wflow_id,.estimator,n,std_err,.config,mn_log_loss,pr_auc,roc_auc
-random_forest,binary,1,NA,Preprocessor1_Model1,0.27270868048598845,0.6932112414882283,0.8840269523198298
+random_forest,binary,1,NA,Preprocessor1_Model1,0.2735713036184717,0.6975752885168596,0.8862883255836033

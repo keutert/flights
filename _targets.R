@@ -123,7 +123,7 @@ list(
     ) |>
     add_recipe(
       recipe(
-        arr_delay ~ air_time + distance + dep_time + carrier,
+        arr_delay ~ air_time + distance + dep_time + carrier + origin,
         data = train_data
       ) |>
       step_impute_median(
