@@ -118,7 +118,8 @@ list(
     baseline_wflow,
     workflow() |>
     add_model(
-      logistic_reg()
+      rand_forest(mode = 'classification')
+
     ) |>
     add_recipe(
       recipe(
