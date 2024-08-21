@@ -68,5 +68,12 @@ list(
     test_data,
     split |>
       testing()
+  ),
+  # create recipe
+  tar_target(
+    name = recipe,
+    recipe %>%
+      step_impute_linear(all_numeric_predictors()) %>%
+      step_normalize(all_numeric_predictors())
   )
 )
