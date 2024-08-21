@@ -1,2 +1,2 @@
 wflow_id,.estimator,n,std_err,.config,mn_log_loss,pr_auc,roc_auc
-baseline_glm,binary,1,NA,Preprocessor1_Model1,0.3101647009574303,0.597879793015643,0.8475074422015092
+random_forest,binary,1,NA,Preprocessor1_Model1,0.3101647009574303,0.597879793015643,0.8475074422015092

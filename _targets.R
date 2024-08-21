@@ -148,7 +148,7 @@ list(
     command =
     baseline_tuned |>
     collect_metrics() |>
-    mutate(wflow_id = 'baseline_glm')
+    mutate(wflow_id = 'random_forest')
   ),
   # bind together model metrics
   tar_target(
